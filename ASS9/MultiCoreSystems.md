@@ -72,13 +72,12 @@ void loop() {
 
 -----
 
+![Original](Ass9_MultiCore Systems_1.png)
 ## 🚀 Experiment Cases
 
 ### Case A: Pinned to Same Core (Core 0)
 
 Both Task L and Task H are pinned to `pro_cpu` (Core 0).
-
-![Original](Ass9_MultiCore Systems_1.png)
 
 **Code modification in `setup()`:**
 
@@ -94,8 +93,8 @@ Both Task L and Task H are pinned to `pro_cpu` (Core 0).
   * No resets will occur.
 
 
+![Case A Screenshot](Ass9_MultiCore Systems_2.png)
 ### Case B: Pinned to Split Cores (Core 0 / Core 1)
-![Case A Screenshot](results/Ass9_MultiCore Systems_2.png)
 
 `Task L` is pinned to `pro_cpu` (Core 0), and `Task H` is pinned to `app_cpu` (Core 1).
 
@@ -110,8 +109,10 @@ Both Task L and Task H are pinned to `pro_cpu` (Core 0).
   * Because the tasks are running in parallel on different cores, their priorities do not matter. They will print at roughly the same, regular interval.
   * No resets will occur.
 
+
+![Case A Screenshot](Ass9_MultiCore Systems_3.png)
 ### Case C: No Core Affinity (tskNO\_AFFINITY)
-![Case A Screenshot](results/Ass9_MultiCore Systems_3.png)
+
 
 The `tskNO_AFFINITY` option is used, allowing the FreeRTOS scheduler to assign cores freely.
 
