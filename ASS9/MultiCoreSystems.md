@@ -75,9 +75,10 @@ void loop() {
 ## 🚀 Experiment Cases
 
 ### Case A: Pinned to Same Core (Core 0)
-![Case A Screenshot](/Ass9_MultiCore Systems_1.png)
 
 Both Task L and Task H are pinned to `pro_cpu` (Core 0).
+
+![Original](Ass9_MultiCore Systems_1.png)
 
 **Code modification in `setup()`:**
 
