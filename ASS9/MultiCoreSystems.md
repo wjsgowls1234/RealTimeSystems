@@ -1,4 +1,3 @@
-
 ## 💻 Base Code
 
 All cases use the following code as a base. Only the `xTaskCreatePinnedToCore` calls within the `setup()` function are modified for each case.
@@ -72,10 +71,11 @@ void loop() {
 
 -----
 
-![Original](Ass9_MultiCore Systems_1.png)
+
 ## 🚀 Experiment Cases
 
 ### Case A: Pinned to Same Core (Core 0)
+![CaseA](Ass9_MultiCoreSystems_1.png)
 
 Both Task L and Task H are pinned to `pro_cpu` (Core 0).
 
@@ -93,9 +93,9 @@ Both Task L and Task H are pinned to `pro_cpu` (Core 0).
   * No resets will occur.
 
 
-![Case A Screenshot](Ass9_MultiCore Systems_2.png)
-### Case B: Pinned to Split Cores (Core 0 / Core 1)
 
+### Case B: Pinned to Split Cores (Core 0 / Core 1)
+![CaseB](Ass9_MultiCoreSystems_2.png)
 `Task L` is pinned to `pro_cpu` (Core 0), and `Task H` is pinned to `app_cpu` (Core 1).
 
 **Code modification in `setup()`:**
@@ -110,10 +110,9 @@ Both Task L and Task H are pinned to `pro_cpu` (Core 0).
   * No resets will occur.
 
 
-![Case A Screenshot](Ass9_MultiCore Systems_3.png)
+
 ### Case C: No Core Affinity (tskNO\_AFFINITY)
-
-
+![CaseC](Ass9_MultiCoreSystems_3.png)
 The `tskNO_AFFINITY` option is used, allowing the FreeRTOS scheduler to assign cores freely.
 
 **Code modification in `setup()`:**
